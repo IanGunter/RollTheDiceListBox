@@ -40,10 +40,12 @@ Partial Class RollTheDiceForm
         '
         'RollDiceListBox
         '
+        Me.RollDiceListBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RollDiceListBox.FormattingEnabled = True
+        Me.RollDiceListBox.ItemHeight = 18
         Me.RollDiceListBox.Location = New System.Drawing.Point(12, 44)
         Me.RollDiceListBox.Name = "RollDiceListBox"
-        Me.RollDiceListBox.Size = New System.Drawing.Size(776, 329)
+        Me.RollDiceListBox.Size = New System.Drawing.Size(776, 328)
         Me.RollDiceListBox.TabIndex = 0
         '
         'MenuStrip1
