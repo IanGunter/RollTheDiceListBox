@@ -22,6 +22,7 @@ Partial Class RollTheDiceForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.RollDiceListBox = New System.Windows.Forms.ListBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -31,6 +32,9 @@ Partial Class RollTheDiceForm
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.RollButton = New System.Windows.Forms.Button()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopGetSomeHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +57,7 @@ Partial Class RollTheDiceForm
         '
         'MenuToolStripMenuItem
         '
-        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RollToolStripMenuItem, Me.ClearToolStripMenuItem})
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RollToolStripMenuItem, Me.ClearToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
@@ -72,6 +76,7 @@ Partial Class RollTheDiceForm
         '
         'HelpToolStripMenuItem
         '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StopGetSomeHelpToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -84,6 +89,7 @@ Partial Class RollTheDiceForm
         Me.ExitButton.Size = New System.Drawing.Size(112, 59)
         Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "EXIT"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "Exit program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'ClearButton
@@ -94,6 +100,7 @@ Partial Class RollTheDiceForm
         Me.ClearButton.Size = New System.Drawing.Size(113, 59)
         Me.ClearButton.TabIndex = 3
         Me.ClearButton.Text = "CLEAR"
+        Me.ToolTip1.SetToolTip(Me.ClearButton, "Clear the display")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'RollButton
@@ -104,7 +111,20 @@ Partial Class RollTheDiceForm
         Me.RollButton.Size = New System.Drawing.Size(116, 59)
         Me.RollButton.TabIndex = 4
         Me.RollButton.Text = "ROLL"
+        Me.ToolTip1.SetToolTip(Me.RollButton, "Roll The Dice")
         Me.RollButton.UseVisualStyleBackColor = True
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'StopGetSomeHelpToolStripMenuItem
+        '
+        Me.StopGetSomeHelpToolStripMenuItem.Name = "StopGetSomeHelpToolStripMenuItem"
+        Me.StopGetSomeHelpToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StopGetSomeHelpToolStripMenuItem.Text = "Stop. Get some help"
         '
         'RollTheDiceForm
         '
@@ -135,4 +155,7 @@ Partial Class RollTheDiceForm
     Friend WithEvents ExitButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents RollButton As Button
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StopGetSomeHelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

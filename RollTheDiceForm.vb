@@ -2,9 +2,11 @@
 'RCET 0265
 'RollTheDice
 'Fall 2020
-'
+'https://github.com/IanGunter/RollTheDiceListBox.git
 
 Public Class RollTheDiceForm
+    Dim getHelp As String
+
 
     Sub Rolldice()
         Dim randomNumber As Integer
@@ -25,10 +27,10 @@ Public Class RollTheDiceForm
         'Rolls dice 1000 times
         For i = 1 To 1000
 
-                randomNumber = CInt(GetRandomNumber(1, 6))
-                numberrolled(randomNumber - 2) += 1
+            randomNumber = CInt(GetRandomNumber(1, 6))
+            numberrolled(randomNumber - 2) += 1
 
-            Next
+        Next
 
 
         'Formats location for text on console.
@@ -90,6 +92,25 @@ Public Class RollTheDiceForm
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub RollToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RollToolStripMenuItem.Click
+        Rolldice()
+    End Sub
+
+    Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
+        RollDiceListBox.Items.Clear()
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
+    End Sub
+
+    Public Sub StopGetSomeHelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopGetSomeHelpToolStripMenuItem.Click
+        getHelp = "Click buttons to do the things..."
+        RollDiceListBox.Items.Add(getHelp)
+        RollDiceListBox.Items.Add("")
+        RollDiceListBox.Items.Add("")
     End Sub
 End Class
 
