@@ -90,7 +90,7 @@ Partial Class RollTheDiceForm
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(112, 59)
         Me.ExitButton.TabIndex = 2
-        Me.ExitButton.Text = "EXIT"
+        Me.ExitButton.Text = "&EXIT"
         Me.ToolTip1.SetToolTip(Me.ExitButton, "Exit program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
@@ -101,7 +101,7 @@ Partial Class RollTheDiceForm
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(113, 59)
         Me.ClearButton.TabIndex = 3
-        Me.ClearButton.Text = "CLEAR"
+        Me.ClearButton.Text = "&CLEAR"
         Me.ToolTip1.SetToolTip(Me.ClearButton, "Clear the display")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
@@ -112,7 +112,7 @@ Partial Class RollTheDiceForm
         Me.RollButton.Name = "RollButton"
         Me.RollButton.Size = New System.Drawing.Size(116, 59)
         Me.RollButton.TabIndex = 4
-        Me.RollButton.Text = "ROLL"
+        Me.RollButton.Text = "&ROLL"
         Me.ToolTip1.SetToolTip(Me.RollButton, "Roll The Dice")
         Me.RollButton.UseVisualStyleBackColor = True
         '
