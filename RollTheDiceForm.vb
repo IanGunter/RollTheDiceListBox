@@ -112,6 +112,11 @@ Public Class RollTheDiceForm
         RollDiceListBox.Items.Add("")
         RollDiceListBox.Items.Add("")
     End Sub
+
+    Private Sub RollTheDiceForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Enables hotkeys on startup 
+        ActiveControl = RollButton
+    End Sub
 End Class
 
 
