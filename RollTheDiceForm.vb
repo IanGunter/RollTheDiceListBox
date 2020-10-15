@@ -4,6 +4,10 @@
 'Fall 2020
 'https://github.com/IanGunter/RollTheDiceListBox.git
 
+Option Strict On
+Option Explicit On
+Option Compare Text
+
 Public Class RollTheDiceForm
     Dim getHelp As String
 
@@ -68,8 +72,8 @@ Public Class RollTheDiceForm
     'Function Generates a random number.
     Function GetRandomNumber(ByVal minimum As Single,
                              ByVal maximum As Single) As Single
-        Dim diceOne As Single
-        Dim diceTwo As Single
+        Dim diceOne As Double
+        Dim diceTwo As Double
         Dim diceTotal As Single
         Do
             diceOne = ((maximum * Rnd()) + 0.5)
