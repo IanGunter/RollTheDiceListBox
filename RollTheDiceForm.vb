@@ -11,22 +11,14 @@ Option Compare Text
 Public Class RollTheDiceForm
     Dim getHelp As String
 
-
     Sub Rolldice()
         Dim randomNumber As Integer
-        Dim numberrolled(10) As Integer
+        Dim numberrolled(10) As Integer 'camelCase - TJR
         Dim text1 As String
         Dim text2 As String
         Dim listBoxText As String
         Dim formatDashes As String
         Randomize()
-
-
-
-
-
-
-
 
         'Rolls dice 1000 times
         For i = 1 To 1000
@@ -40,8 +32,6 @@ Public Class RollTheDiceForm
         'Formats location for text on console.
         For i = 2 To 12
             text1 = (text1 & String.Format("{0, 11}", i) & "|")
-
-
         Next
         RollDiceListBox.Items.Add(text1)
 
@@ -51,21 +41,17 @@ Public Class RollTheDiceForm
 
         For i = 0 To 10
             text2 = (text2 & String.Format("{0, 10}", numberrolled(i)) & "|")
-
-
         Next
         RollDiceListBox.Items.Add(text2)
 
         listBoxText = (text1 & vbNewLine & formatDashes & vbNewLine & text2)
 
         'Erases Array then redims it
-        Erase numberrolled
+        Erase numberrolled ' I think ReDim without Preserve clears the array - TJR
         ReDim numberrolled(10)
 
         RollDiceListBox.Items.Add("")
         RollDiceListBox.Items.Add("")
-
-
 
     End Sub
 
@@ -119,7 +105,7 @@ Public Class RollTheDiceForm
 
     Private Sub RollTheDiceForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Enables hotkeys on startup 
-        ActiveControl = RollButton
+        ActiveControl = RollButton ' ??? set Accept and Cancel Button in Form properties - TJR
     End Sub
 End Class
 
